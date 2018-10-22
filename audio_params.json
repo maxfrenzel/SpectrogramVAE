@@ -1,0 +1,7 @@
+{
+    "N_FFT": 1024,
+    "HOP_LENGTH": 256,
+    "SAMPLING_RATE": 16000,
+    "MELSPEC_BANDS": 128,
+    "sample_secs": 2
+}

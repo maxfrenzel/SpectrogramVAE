@@ -1,0 +1,13 @@
+{
+    "dim_latent": 64,
+    "cells_hidden": 512,
+    "conv_channels": [32, 64, 32, 32],
+    "max_pooling": [[4, 4], [2, 2], [2, 4], [2, 2]],
+    "deconv_shape": [[1, 15, 14, 32],
+                    [1, 31, 31, 64],
+                    [1, 63, 62, 32],
+                    [1, 128, 126, 1]],
+    "iaf_flow_length": 5,
+    "dim_autoregressive_nl": 64,
+    "initial_s_offset": 1.0
+}
