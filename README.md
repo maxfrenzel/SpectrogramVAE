@@ -33,8 +33,6 @@ Based on
 * Full dataset: `python encode_and_reconstruct.py --encode_full true`
 
 ### Finding similar files:
-```
-python find_similar.py --target target_audio_file --sample_dirs list_of_dirs_to_search
-```
+```python find_similar.py --target target_audio_file --sample_dirs list_of_dirs_to_search```
 
 All the above scripts have other options and uses as well, look into the code for more details.
