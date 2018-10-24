@@ -16,46 +16,6 @@ def create_bias_variable(name, shape):
     return tf.Variable(initializer(shape=shape), name)
 
 
-# def upsample(net, name, stride, mode='ZEROS'):
-#     """
-#     Imitate reverse operation of Max-Pooling by either placing original max values
-#     into a fixed postion of upsampled cell:
-#     [0.9] =>[[.9, 0],   (stride=2)
-#            [ 0, 0]]
-#     or copying the value into each cell:
-#     [0.9] =>[[.9, .9],  (stride=2)
-#            [ .9, .9]]
-#     :param net: 4D input tensor with [batch_size, width, heights, channels] axis
-#     :param stride:
-#     :param mode: string 'ZEROS' or 'COPY' indicating which value to use for undefined cells
-#     :return:  4D tensor of size [batch_size, width*stride, heights*stride, channels]
-#     """
-#     assert mode in ['COPY', 'ZEROS']
-#     with tf.name_scope('Upsampling'):
-#         net = _upsample_along_axis(net, 2, stride[1], mode=mode)
-#         net = _upsample_along_axis(net, 1, stride[0], mode=mode)
-#         return net
-
-
-# def _upsample_along_axis(volume, axis, stride, mode='ZEROS'):
-#     shape = volume.get_shape().as_list()
-
-#     assert mode in ['COPY', 'ZEROS']
-#     assert 0 <= axis < len(shape)
-
-#     target_shape = shape[:]
-#     target_shape[axis] *= stride
-
-#     print(volume.dtype)
-#     print(shape)
-
-#     padding = tf.zeros(shape, dtype=volume.dtype) if mode == 'ZEROS' else volume
-#     parts = [volume] + [padding for _ in range(stride - 1)]
-#     volume = tf.concat(parts, min(axis+1, len(shape)-1))
-
-#     volume = tf.reshape(volume, target_shape)
-#     return volume
-
 def upsample(value, name, factor=[2, 2]):
     size = [int(value.shape[1] * factor[0]), int(value.shape[2] * factor[1])]
     with tf.name_scope(name):
