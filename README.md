@@ -19,18 +19,22 @@ The dataset pickle file has to be a dictionary of the form
 ```
 and be stored as `dataset.pkl` in the root directory.
 
-Training the VAE: `python train.py`
+### Training the VAE 
+```python train.py```
 
-Generating samples based on
+### Generating samples 
+Based on
 * Sampling from latent space: `python generate.py`
 * Single input file: `python generate.py --file_in filename`
 * Multiple input files: `python generate.py --file_in list_of_filenames`
 
-Encode audio
+### Encode audio
 * Single file: `python encode_and_reconstruct.py --audio_file filename`
 * Full dataset: `python encode_and_reconstruct.py --encode_full true`
 
-Finding similar files:
-`python find_similar.py --target target_audio_file --sample_dirs list_of_dirs_to_search`
+### Finding similar files:
+```
+python find_similar.py --target target_audio_file --sample_dirs list_of_dirs_to_search
+```
 
 All the above scripts have other options and uses as well, look into the code for more details.
