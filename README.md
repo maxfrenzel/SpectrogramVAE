@@ -1,9 +1,11 @@
 # Spectrogram VAE
 TensorFlow implementation of a Variational Autencoder for encoding spectrograms.
 
+This is the main model I used for my [NeuralFunk project](https://towardsdatascience.com/neuralfunk-combining-deep-learning-with-sound-design-91935759d628).
+
 ## Acknowledgments
 * The preprocessing as well as the encoder architecture were heavily inspired by [this iPython Notebook](https://gist.github.com/naotokui/a2b331dd206b13a70800e862cfe7da3c).
-* A lot of the data-feeding code and other bits and pieces were adapted from [this Wavenet implementation](https://github.com/ibab/tensorflow-wavenet).
+* A lot of the data-feeding code and many other bits and pieces were adapted from [this Wavenet implementation](https://github.com/ibab/tensorflow-wavenet).
 * The Griffin-Lim algorithm was taken from the [Magenta NSynth utils](https://github.com/tensorflow/magenta/blob/master/magenta/models/nsynth/utils.py).
 
 ## Overview
