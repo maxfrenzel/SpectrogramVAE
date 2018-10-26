@@ -3,6 +3,8 @@ TensorFlow implementation of a Variational Autencoder for encoding spectrograms.
 
 This is the main model I used for my [NeuralFunk project](https://towardsdatascience.com/neuralfunk-combining-deep-learning-with-sound-design-91935759d628).
 
+This code was not really intended to be shared and is quite messy. I might improve it at some point in the future, but for now be aware that everything is quite hacky and badly documented.
+
 ## Acknowledgments
 * The preprocessing as well as the encoder architecture were heavily inspired by [this iPython Notebook](https://gist.github.com/naotokui/a2b331dd206b13a70800e862cfe7da3c).
 * A lot of the data-feeding code and many other bits and pieces were adapted from [this Wavenet implementation](https://github.com/ibab/tensorflow-wavenet).
