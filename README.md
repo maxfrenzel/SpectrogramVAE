@@ -1,5 +1,5 @@
 # Spectrogram VAE
-TensorFlow implementation of a Variational Autencoder for encoding spectrograms.
+TensorFlow implementation of a Variational Autencoder with Inverse Autoregressive Flows for encoding spectrograms.
 
 This is the main model I used for my [NeuralFunk project](https://towardsdatascience.com/neuralfunk-combining-deep-learning-with-sound-design-91935759d628).
 
